@@ -1,6 +1,6 @@
  <!-- Navbar Start -->
  <div class="container-fluid bg-light position-relative shadow"  >
- <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-0 px-lg-5" style="background-color: #ADD8E6;">
+ <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-0 px-lg-5" >
 
         <a
           href="{{ url('') }}" 

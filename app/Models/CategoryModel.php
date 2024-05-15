@@ -59,4 +59,15 @@ class CategoryModel extends Model
                 ->where('status', '=', 0)
                 ->first();
     }
+
+    static public function getCategoryHome()
+    {
+        return self::select('category.*')
+                ->where('is_delete', '=', 0)
+                ->where('is_menu', '=', 0)
+                ->where('status', '=', 0)
+                ->orderBy('id', 'desc')
+                ->limit(6)
+                ->get();
+    }
 }

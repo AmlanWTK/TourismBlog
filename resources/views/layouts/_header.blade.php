@@ -43,9 +43,19 @@
             active  @endif">Contact</a>
           </div>
 
-          <a href="{{ url('register') }}" class="btn btn-primary px-4" style="background-color: #002244;">Register</a>
-          <a href="{{ url('login') }}" class="btn btn-primary px-4" style="background-color: #002244; margin-left: 8px;">Login</a>
+          @auth
+          <!-- Logout Button using POST method -->
+          <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+           @csrf
+            <button type="submit" class="btn btn-primary px-4">Logout</button>
+          </form>
+          @endauth
 
+          @guest
+          <!-- Register and Login Buttons -->
+            <a href="{{ url('register') }}" class="btn btn-primary px-4">Register</a>
+            <a href="{{ url('login') }}" class="btn btn-primary px-4" style="margin-left: 8px;">Login</a>
+          @endguest
         </div>
       </nav>
     </div>

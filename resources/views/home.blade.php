@@ -1,152 +1,110 @@
     @extends('layouts.app')
+    @section('style')
+<style>
+.owl-dots {
+    text-align: center;
+    position: absolute;
+    bottom: -25px; /* Adjust this value as needed */
+    width: 100%;
+}
 
+.owl-dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #888; /* Gray dots, change as needed */
+    z-index: 1000;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.owl-dot.active {
+    background-color: #000; /* Active dot color, change as needed */
+}
+</style>
+@endsection
     @section('content')
     
     <!-- Header Start -->
-    <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
-        <div class="row align-items-center px-3">
+    <div class="container-fluid bg-primary px-0 px-md-5 mb-5" style="background-image: url('front/img/back.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%;">
+   
+     <div class="row align-items-center px-3">
             <div class="col-lg-6 text-center text-lg-left">
                 <h4 class="text-white mb-4 mt-5 mt-lg-0">Kids Learning Center</h4>
-                <h1 class="display-3 font-weight-bold text-white">
-                    New Approach to Kids Education
-                </h1>
+                <h2 class="text-white mb-4 mt-5 mt-lg-0">
+                "Discovering Bangladesh: Tales from the Land of Rivers and Rich Culture"
+                </h2>
                 <p class="text-white mb-4">
-                    Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed
-                    sit. Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed
-                    ipsum at ipsum nonumy amet. Clita lorem dolore sed stet et est justo
-                    dolore.
+                Welcome to our voyage through the colorful tapestry of Bangladesh! From the hectic streets of Dhaka to the peaceful serenity of the Sundarbans, join us as we explore this amazing land where every corner tells a tale. Immerse yourself in the warmth of Bangladeshi hospitality, experience the pleasures of its rich cuisine, and embark on an expedition that will capture you with the beauty and resilience of this fascinating country. Join us as we find the hidden gems and timeless treasures of Bangladesh, ready to be discovered by intrepid travellers like you.
+
                 </p>
                 <a href="" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
-                <img class="img-fluid mt-5" src="{{url('front/img/header.png')}}" alt="" />
-            </div>
+          <img class="img-fluid mt-5"style="border-radius: 50%; height: 25rem; width: 30rem;"
+src="{{ url('/front/img/aml3.jpg') }}" alt="" />
+        </div>
         </div>
     </div>
     <!-- Header End -->
     <!-- Facilities Start -->
     <div class="container-fluid pt-5">
-        <div class="container pb-3">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-                         style="padding: 30px">
-                        <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Play Ground</h4>
-                            <p class="m-0">
-                                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                                lorem amet elitr vero...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-                         style="padding: 30px">
-                        <i class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Music and Dance</h4>
-                            <p class="m-0">
-                                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                                lorem amet elitr vero...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-                         style="padding: 30px">
-                        <i class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Arts and Crafts</h4>
-                            <p class="m-0">
-                                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                                lorem amet elitr vero...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-                         style="padding: 30px">
-                        <i class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Safe Transportation</h4>
-                            <p class="m-0">
-                                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                                lorem amet elitr vero...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-                         style="padding: 30px">
-                        <i class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Healthy food</h4>
-                            <p class="m-0">
-                                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                                lorem amet elitr vero...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4"
-                         style="padding: 30px">
-                        <i class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Educational Tour</h4>
-                            <p class="m-0">
-                                Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero
-                                lorem amet elitr vero...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     <div class="text-center pb-2">
+      <h1 class="mb-4">Exploring Bangladesh: Unveiling the Six Divisions</h1>
     </div>
-    <!-- Facilities Start -->
+      <div class="container pb-3"> 
+        <div class="row">
+        @foreach($data['getCategoryHome'] as $CategoryHome)
+          <div class="col-lg-4 col-md-6 pb-1">
+          <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px">
+             <img src="{{ url('/front/img/logo.png') }}" width="140" height="140">
+             
+              <div class="pl-4">
+                <h4> <a href="{{ url(''.$CategoryHome->slug) }}" class="nav-item nav-link" >{{$CategoryHome->name}}</a>
+              </h4>
+                <p class="m-0">
+                {!! strip_tags(Str::substr($CategoryHome->meta_description,0,110)) !!} ...
+                </p>
+              </div>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+    </div>
+    <!-- Facilities End -->
+
+
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <img class="img-fluid rounded mb-5 mb-lg-0"
-                         src="{{url('front/img/about-1.jpg')}}"
+                         src="{{url('front/img/travel1.jpg')}}"
                          alt="" />
                 </div>
                 <div class="col-lg-7">
                     <p class="section-title pr-5">
                         <span class="pr-2">Learn About Us</span>
                     </p>
-                    <h1 class="mb-4">Best School For Your Kids</h1>
+                    <h1 class="mb-4">Best Traveling Blog Picks For You</h1>
                     <p>
-                        Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo
-                        dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo.
-                        Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                        dolor
+                    Embark on a virtual journey through Bangladesh's natural wonders with our curated selection of breathtaking waterfalls. From the majestic Madhabkunda to the hidden gems of Bandarban, immerse yourself in the beauty of the Land of Rivers
                     </p>
                     <div class="row pt-2 pb-4">
                         <div class="col-6 col-md-4">
-                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="" />
+                            <img class="img-fluid1 rounded" src="{{ url('/front/img/logo1.png') }}"   />
                         </div>
                         <div class="col-6 col-md-8">
                             <ul class="list-inline m-0">
                                 <li class="py-2 border-top border-bottom">
-                                    <i class="fa fa-check text-primary mr-3"></i>Labore eos amet
-                                    dolor amet diam
+                                    <i class="fa fa-check text-primary mr-3"></i>Roam through the rugged peaks of Bandarban
                                 </li>
                                 <li class="py-2 border-bottom">
-                                    <i class="fa fa-check text-primary mr-3"></i>Etsea et sit
-                                    dolor amet ipsum
-                                </li>
+                                    <i class="fa fa-check text-primary mr-3"></i>Explore Bangladesh's rich tapestry of landscapes
                                 <li class="py-2 border-bottom">
-                                    <i class="fa fa-check text-primary mr-3"></i>Diam dolor diam
-                                    elitripsum vero.
+                                    <i class="fa fa-check text-primary mr-3"></i>Mesmerizing charm of Waterfals
                                 </li>
                             </ul>
                         </div>
@@ -157,137 +115,57 @@
         </div>
     </div>
     <!-- About End -->
-    <!-- Class Start -->
+    <!-- Popular Destination -->
+    
     <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="text-center pb-2">
-                <p class="section-title px-5">
-                    <span class="px-2">Popular Classes</span>
-                </p>
-                <h1 class="mb-4">Classes for Your Kids</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{{url('front/img/class-1.jpg')}}" alt="" />
-                        <div class="card-body text-center">
-                            <h4 class="card-title">Drawing Class</h4>
-                            <p class="card-text">
-                                Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
-                                ipsum duo et no et, ipsum ipsum erat duo amet clita duo
-                            </p>
-                        </div>
-                        <div class="card-footer bg-transparent py-4 px-5">
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Age of Kids</strong>
-                                </div>
-                                <div class="col-6 py-1">3 - 6 Years</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Total Seats</strong>
-                                </div>
-                                <div class="col-6 py-1">40 Seats</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Class Time</strong>
-                                </div>
-                                <div class="col-6 py-1">08:00 - 10:00</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Tution Fee</strong>
-                                </div>
-                                <div class="col-6 py-1">$290 / Month</div>
-                            </div>
-                        </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{{url('front/img/class-2.jpg')}}" alt="" />
-                        <div class="card-body text-center">
-                            <h4 class="card-title">Language Learning</h4>
-                            <p class="card-text">
-                                Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
-                                ipsum duo et no et, ipsum ipsum erat duo amet clita duo
-                            </p>
-                        </div>
-                        <div class="card-footer bg-transparent py-4 px-5">
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Age of Kids</strong>
-                                </div>
-                                <div class="col-6 py-1">3 - 6 Years</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Total Seats</strong>
-                                </div>
-                                <div class="col-6 py-1">40 Seats</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Class Time</strong>
-                                </div>
-                                <div class="col-6 py-1">08:00 - 10:00</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Tution Fee</strong>
-                                </div>
-                                <div class="col-6 py-1">$290 / Month</div>
-                            </div>
-                        </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="card border-0 bg-light shadow-sm pb-2">
-                        <img class="card-img-top mb-2" src="{{url('front/img/class-3.jpg')}}" alt="" />
-                        <div class="card-body text-center">
-                            <h4 class="card-title">Basic Science</h4>
-                            <p class="card-text">
-                                Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
-                                ipsum duo et no et, ipsum ipsum erat duo amet clita duo
-                            </p>
-                        </div>
-                        <div class="card-footer bg-transparent py-4 px-5">
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Age of Kids</strong>
-                                </div>
-                                <div class="col-6 py-1">3 - 6 Years</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Total Seats</strong>
-                                </div>
-                                <div class="col-6 py-1">40 Seats</div>
-                            </div>
-                            <div class="row border-bottom">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Class Time</strong>
-                                </div>
-                                <div class="col-6 py-1">08:00 - 10:00</div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6 py-1 text-right border-right">
-                                    <strong>Tution Fee</strong>
-                                </div>
-                                <div class="col-6 py-1">$290 / Month</div>
-                            </div>
-                        </div>
-                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">Must-See Wonders</span>
+          </p>
+          <h1 class="mb-4">Exploring Bangladesh's Top Destinations</h1>
         </div>
+        <div class="row pb-3">
+        @foreach($data['getPopular'] as $value)
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm mb-2">
+              <img class="card-img-top mb-2" src="{{ $value->getImage() }}" style="height: 233px; width: 100%; object-fit:
+              cover; " alt="" /> <!--this styling fits the pics in the box of desired height and width --> 
+              <div class="card-body bg-light text-center p-4">
+               <a href="{{ url(''.$value->slug) }}">
+               <h4 class="">
+                    {!! strip_tags(Str::substr($value->title,0,60)) !!}
+                </h4>
+               </a>
+                <div class="d-flex justify-content-center mb-3">
+                  <small class="mr-3"><i class="fa fa-user text-primary"></i>{{ $value->user_name }}</small>
+                  <small class="mr-3">
+                    <a href="{{ url(''.$value-> category_slug) }}"><i class="fa fa-folder text-primary"></i> {{ $value-> category_name }}</a>
+                  </small>
+                  <small class="mr-3"><i class="fa fa-comments text-primary"></i>{{ $value->getCommentCount() }}</small >
+                </div>
+                <p>
+                    {!! strip_tags(Str::substr($value->description,0,160)) !!} ... <!--fits the description upto a definite size -->
+                </p>
+                <a href="{{ url(''.$value->slug) }}" class="btn btn-primary px-4 mx-auto my-2"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          @endforeach
+
+
+          <div class="col-md-12 mb-4">
+
+
+           {!! $data['getPopular']->appends(Illuminate\Support\Facades\Request::except('page'))->links() !!} 
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Class End -->
+    <!-- Popular Destination  End -->
     <!-- Registration Start -->
     <div class="container-fluid py-5">
         <div class="container">
@@ -361,120 +239,109 @@
         </div>
     </div>
     <!-- Registration End -->
-    <!-- Team Start -->
+    <!-- Waterfalls -->
     <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="text-center pb-2">
-                <p class="section-title px-5">
-                    <span class="px-2">Our Teachers</span>
-                </p>
-                <h1 class="mb-4">Meet Our Teachers</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4"
-                         style="border-radius: 100%">
-                        <img class="img-fluid w-100" src="{{url('front/img/team-1.jpg')}}" alt="" />
-                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="btn btn-outline-light text-center px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>Julia Smith</h4>
-                    <i>Music Teacher</i>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4"
-                         style="border-radius: 100%">
-                        <img class="img-fluid w-100" src="{{url('front/img/team-2.jpg')}}" alt="" />
-                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="btn btn-outline-light text-center px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>Jhon Doe</h4>
-                    <i>Language Teacher</i>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4"
-                         style="border-radius: 100%">
-                        <img class="img-fluid w-100" src="{{url('front/img/team-3.jpg')}}" alt="" />
-                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="btn btn-outline-light text-center px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>Mollie Ross</h4>
-                    <i>Dance Teacher</i>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-5">
-                    <div class="position-relative overflow-hidden mb-4"
-                         style="border-radius: 100%">
-                        <img class="img-fluid w-100" src="{{url('front/img/team-4.jpg')}}" alt="" />
-                        <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                            <a class="btn btn-outline-light text-center mr-2 px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="btn btn-outline-light text-center mr-2 px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="btn btn-outline-light text-center px-0"
-                               style="width: 38px; height: 38px"
-                               href="#">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <h4>Donald John</h4>
-                    <i>Art Teacher</i>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">Discovering Bangladesh's Hidden Gems</span>
+          </p>
+          <h1 class="mb-4">Exploring the Enchanting Waterfalls of the Land of Rivers</h1>
         </div>
+        <div class="row pb-3">
+        @foreach($data['getWaterfall'] as $value)
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm mb-2">
+              <img class="card-img-top mb-2" src="{{ $value->getImage() }}" style="height: 233px; width: 100%; object-fit:
+              cover; " alt="" /> <!--this styling fits the pics in the box of desired height and width --> 
+              <div class="card-body bg-light text-center p-4">
+               <a href="{{ url(''.$value->slug) }}">
+               <h4 class="">
+                    {!! strip_tags(Str::substr($value->title,0,60)) !!}
+                </h4>
+               </a>
+                <div class="d-flex justify-content-center mb-3">
+                  <small class="mr-3"><i class="fa fa-user text-primary"></i>{{ $value->user_name }}</small>
+                  <small class="mr-3">
+                    <a href="{{ url(''.$value-> category_slug) }}"><i class="fa fa-folder text-primary"></i> {{ $value-> category_name }}</a>
+                  </small>
+                  <small class="mr-3"><i class="fa fa-comments text-primary"></i>{{ $value->getCommentCount() }}</small >
+                </div>
+                <p>
+                    {!! strip_tags(Str::substr($value->description,0,160)) !!} ... <!--fits the description upto a definite size -->
+                </p>
+                <a href="{{ url(''.$value->slug) }}" class="btn btn-primary px-4 mx-auto my-2"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          @endforeach
+
+
+          <div class="col-md-12 mb-4">
+
+
+           {!! $data['getBeach']->appends(Illuminate\Support\Facades\Request::except('page'))->links() !!} 
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Team End -->
+    <!-- Waterfalls End -->
+
+
+
+    <!-- Stories -->
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">Unforgettable Travel Tales</span>
+          </p>
+          <h1 class="mb-4">Inspiring Travel Stories from the Heart of Bangladesh</h1>
+        </div>
+        <div class="row pb-3">
+        @foreach($data['getStories'] as $value)
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm mb-2">
+              <img class="card-img-top mb-2" src="{{ $value->getImage() }}" style="height: 233px; width: 100%; object-fit:
+              cover; " alt="" /> <!--this styling fits the pics in the box of desired height and width --> 
+              <div class="card-body bg-light text-center p-4">
+               <a href="{{ url(''.$value->slug) }}">
+               <h4 class="">
+                    {!! strip_tags(Str::substr($value->title,0,60)) !!}
+                </h4>
+               </a>
+                <div class="d-flex justify-content-center mb-3">
+                  <small class="mr-3"><i class="fa fa-user text-primary"></i>{{ $value->user_name }}</small>
+                  <small class="mr-3">
+                    <a href="{{ url(''.$value-> category_slug) }}"><i class="fa fa-folder text-primary"></i> {{ $value-> category_name }}</a>
+                  </small>
+                  <small class="mr-3"><i class="fa fa-comments text-primary"></i>{{ $value->getCommentCount() }}</small >
+                </div>
+                <p>
+                    {!! strip_tags(Str::substr($value->description,0,160)) !!} ... <!--fits the description upto a definite size -->
+                </p>
+                <a href="{{ url(''.$value->slug) }}" class="btn btn-primary px-4 mx-auto my-2"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          @endforeach
+
+
+          <div class="col-md-12 mb-4">
+
+
+           {!! $data['getStories']->appends(Illuminate\Support\Facades\Request::except('page'))->links() !!} 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Stories End -->
     <!-- Testimonial Start -->
     <div class="container-fluid py-5">
         <div class="container p-0">
@@ -558,7 +425,7 @@
     </div>
     <!-- Testimonial End -->
     <!-- Blog Start -->
-    <div class="container-fluid pt-5">
+    <!-- <div class="container-fluid pt-5">
         <div class="container">
             <div class="text-center pb-2">
                 <p class="section-title px-5">
@@ -626,9 +493,167 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Blog End -->
 
-    @endsection
+    <!-- Blog Start -->
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">Exploring Bangladesh's Hidden Treasures</span>
+          </p>
+          <h1 class="mb-4">Unveiling Scenic Hiking Trails</h1>
+        </div>
+        <div class="row pb-3">
+        @foreach($data['getRecord'] as $value)
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm mb-2">
+              <img class="card-img-top mb-2" src="{{ $value->getImage() }}" style="height: 233px; width: 100%; object-fit:
+              cover; " alt="" /> <!--this styling fits the pics in the box of desired height and width --> 
+              <div class="card-body bg-light text-center p-4">
+               <a href="{{ url(''.$value->slug) }}">
+               <h4 class="">
+                    {!! strip_tags(Str::substr($value->title,0,60)) !!}
+                </h4>
+               </a>
+                <div class="d-flex justify-content-center mb-3">
+                  <small class="mr-3"><i class="fa fa-user text-primary"></i>{{ $value->user_name }}</small>
+                  <small class="mr-3">
+                    <a href="{{ url(''.$value-> category_slug) }}"><i class="fa fa-folder text-primary"></i> {{ $value-> category_name }}</a>
+                  </small>
+                  <small class="mr-3"><i class="fa fa-comments text-primary"></i>{{ $value->getCommentCount() }}</small >
+                </div>
+                <p>
+                    {!! strip_tags(Str::substr($value->description,0,160)) !!} ... <!--fits the description upto a definite size -->
+                </p>
+                <a href="{{ url(''.$value->slug) }}" class="btn btn-primary px-4 mx-auto my-2"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          @endforeach
+
+
+          <div class="col-md-12 mb-4">
+
+
+           {!! $data['getRecord']->appends(Illuminate\Support\Facades\Request::except('page'))->links() !!} 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sea Beaches -->
+
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">Discover the Coastal Gems</span>
+          </p>
+          <h1 class="mb-4">Spectacular Beaches in Bangladesh</h1>
+        </div>
+       
+        <div class="row pb-3">
+            
+        @foreach($data['getBeach'] as $value)
+          <div class="col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm mb-2">
+              <img class="card-img-top mb-2" src="{{ $value->getImage() }}" style="height: 233px; width: 100%; object-fit:
+              cover; " alt="" /> <!--this styling fits the pics in the box of desired height and width --> 
+              <div class="card-body bg-light text-center p-4">
+               <a href="{{ url(''.$value->slug) }}">
+               <h4 class="">
+                    {!! strip_tags(Str::substr($value->title,0,60)) !!}
+                </h4>
+               </a>
+                <div class="d-flex justify-content-center mb-3">
+                  <small class="mr-3"><i class="fa fa-user text-primary"></i>{{ $value->user_name }}</small>
+                  <small class="mr-3">
+                    <a href="{{ url(''.$value-> category_slug) }}"><i class="fa fa-folder text-primary"></i> {{ $value-> category_name }}</a>
+                  </small>
+                  <small class="mr-3"><i class="fa fa-comments text-primary"></i>{{ $value->getCommentCount() }}</small >
+                </div>
+                <p>
+                    {!! strip_tags(Str::substr($value->description,0,160)) !!} ... <!--fits the description upto a definite size -->
+                </p>
+                <a href="{{ url(''.$value->slug) }}" class="btn btn-primary px-4 mx-auto my-2"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          @endforeach
+
+
+          <div class="col-md-12 mb-4">
+
+
+           {!! $data['getBeach']->appends(Illuminate\Support\Facades\Request::except('page'))->links() !!} 
+          </div>
+        </div>
+       
+      </div>
+    </div>
+    <!-- Sea Beaches End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid pt-5">
+  <div class="container">
+    <div class="text-center pb-2">
+      <p class="section-title px-5"><span class="px-2">Latest Blog</span></p>
+      <h1 class="mb-4">Latest Articles From Blog</h1>
+    </div>
+    <div class="owl-carousel blog-carousel">
+      @foreach($data['getRecord'] as $value)
+        <div class="item">
+          <div class="card border-0 shadow-sm">
+            <img class="card-img-top" src="{{ $value->getImage() }}" style="height: 233px; width: 100%; object-fit: cover;" alt="Blog image">
+            <div class="card-body bg-light text-center p-4">
+              <a href="{{ url(''.$value->slug) }}" class="text-dark">
+                <h4 class="mb-3">{{ strip_tags(Str::substr($value->title, 0, 60)) }}</h4>
+              </a>
+              <div class="d-flex justify-content-center mb-3">
+                <small class="mr-3"><i class="fa fa-user text-primary"></i> {{ $value->user_name }}</small>
+                <small class="mr-3"><i class="fa fa-folder text-primary"></i> {{ $value->category_name }}</small>
+                <small><i class="fa fa-comments text-primary"></i> {{ $value->getCommentCount() }}</small>
+              </div>
+              <p>{{ strip_tags(Str::substr($value->description, 0, 160)) }}...</p>
+              <a href="{{ url(''.$value->slug) }}" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+            </div>
+          </div>
+        </div>
+      @endforeach
+    </div>
+  </div>
+</div>
+<!-- Blog End -->
+
+@endsection
+
+    @section('script')
+<script>
+ $(document).ready(function(){
+  $('.blog-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dots: true,  // Ensure dots are enabled
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      992: { items: 3 }
+    }
+  });
+});
+</script>
+@endsection
     
    

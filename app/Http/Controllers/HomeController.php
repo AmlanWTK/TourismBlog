@@ -8,6 +8,7 @@ use App\Models\CategoryModel;
 use App\Models\PageModel;
 use App\Models\BlogCommentModel;
 use App\Models\BlogCommentReplyModel;
+use App\Models\User;
 use App\Mail\ContactMail;
 use Auth;
 use Mail;
@@ -124,6 +125,24 @@ public function contact_mail_send(Request $request)
     return redirect('contact');
 
 }
+
+public function index() {
+    $data['getRecord'] = BlogModel::getRecordFrontTrack();
+    $data['getBeach'] = BlogModel::getRecordFrontBeach();
+    $data['getPopular'] = BlogModel::getRecordFrontPopular();
+    $data['getWaterfall'] = BlogModel::getRecordFrontWaterfall();
+    $data['getStories'] = BlogModel::getRecordStories();
+    $data['getCategoryHome'] = CategoryModel::getCategoryHome();
+    $data['getRecordAdminHome'] = User::getRecordAdminHome();
+   // $data['getRecordUserHome'] = User::getRecordUserHome();
+
+    
+
+    return view('home', compact('data'));
+}
+
+
+
 
 
 }

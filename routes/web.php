@@ -24,7 +24,8 @@ use App\Http\Controllers\PageController;
 // });
 
 //Home page- HomeController
-Route::get('/', [HomeController::class, 'home']); //[class, function inside the class]
+//Route::get('/', [HomeController::class, 'home']); 
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('about', [HomeController::class, 'about']);
 Route::get('teams', [HomeController::class, 'teams']);
 Route::get('gallery', [HomeController::class, 'gallery']);
@@ -46,6 +47,7 @@ Route::get('reset/{token}', [AuthController::class, 'reset']);
 Route::post('reset/{token}', [AuthController::class, 'post_reset']);
 
 Route::get('logout', [AuthController::class, 'logout']);
+Route::post('/logout', [AuthController::class, 'loggedout'])->name('logout');
 
 
 
@@ -120,9 +122,13 @@ Route::group(['middleware' => 'adminuser'], function(){ //middleword : fixed wor
    Route::post('blog-comment-reply-submit', [HomeController::class, 'BlogCommentReplySubmit']);
 
    Route::post('contact_mail', [HomeController::class, 'contact_mail_send']);
+   
     
 });
 
 
 //always have to write this at the end-- for the slug: when no concatenation for the route
 Route::get('{slug}', [HomeController::class, 'blogdetail']);
+
+
+

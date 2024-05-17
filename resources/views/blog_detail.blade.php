@@ -4,12 +4,23 @@
 
    <!-- Detail Start -->
    <div class="container py-5">
-      <div class="row ">
+    <div class="row">
         <div class="col-lg-8">
-          @include('layouts._message')
-          <div class="d-flex flex-column text-left mb-3">
+            @include('layouts._message')
+            <!-- <div class="d-flex flex-column text-left mb-3  ">
             
-            <h1 class="mb-3">{{ $getRecord->title }}</h1>
+                <h1 class="mb-3 ">{{ $getRecord->title }}</h1>
+                <a href="{{ $getRecord->map_location }}" target="_blank">
+    <i class="fa fa-map-marker-alt text-primary" style="color: #436850;"></i>
+</a> -->
+<div class="d-flex align-items-center mb-3">
+    <h1 class="mb-0 mr-3">{{ $getRecord->title }}</h1>
+    <a href="{{ $getRecord->map_location }}" target="_blank">
+        <i class="fa fa-map-marker-alt text-primary" style="color: #436850;"></i>
+    </a>
+    </div>
+
+    <div class="d-flex align-items-center mb-3">      
             <div class="d-flex">
               <p class="mr-3"><i class="fa fa-user" style="color: #436850;"></i> {{ $getRecord->user_name }}</p>
               <p class="mr-3">
@@ -18,6 +29,8 @@
               <p class="mr-3"><i class="fa fa-comments" style="color: #436850;"></i> {{ $getRecord->getCommentCount() }} </p>
             </div>
           </div>
+       
+
           <div class="mb-5">
             @if(!empty($getRecord->getImage()))
             <img style="max-height: 574px; object-fit:cover;"
@@ -29,7 +42,7 @@
 
             {!! $getRecord->description !!}
             
-          </div>
+        </div>
 
           <!-- Related Post -->
           @if(!empty($getRelatedPost->count()))

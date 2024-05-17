@@ -82,8 +82,9 @@ class User extends Authenticatable
             return url('upload/profile/'.$this->profile_pic);
         }
         else{
-            return url('assets/img/profile-img.jpg');
+            return url('front/img/amlan3.jpg');
         }
     }
+   
 
 }

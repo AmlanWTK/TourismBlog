@@ -29,6 +29,7 @@ class BlogController extends Controller
           $save = new BlogModel();
           $save->user_id = Auth::user()->id;
           $save->title = trim($request->title);
+          $save->map_location=trim($request->map_location);
           $save->category_id = trim($request->category_id);
           $save->description = trim($request->description);
           $save->meta_description = trim($request->meta_description);
@@ -77,6 +78,7 @@ class BlogController extends Controller
        
         $save = BlogModel::getSingle($id);
         $save->title = trim($request->title);
+        $save->map_location=trim($request->map_location);
         $save->category_id = trim($request->category_id);
         $save->description = trim($request->description);
         $save->meta_description = trim($request->meta_description);

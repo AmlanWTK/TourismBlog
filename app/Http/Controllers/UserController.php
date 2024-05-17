@@ -101,9 +101,9 @@ class UserController extends Controller
     public function UpdateAccountSetting(Request $request){
         $getUser = User::getSingle(Auth::user()->id);
         $getUser->name = $request->name;
-       // $getUser->profile_identity = $request->profile_identity;
-        //$getUser->profile_description = $request->profile_description;
-       // $getUser->save();
+        $getUser->profile_identity = $request->profile_identity;
+        $getUser->profile_description = $request->profile_description;
+        $getUser->save();
 
         if (!empty($request->file('profile_pic'))){
             if(!empty($getUser->profile_pic) && file_exists('upload/profile/'.$getUser->profile_pic))

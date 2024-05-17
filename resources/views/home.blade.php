@@ -26,11 +26,11 @@
     @section('content')
     
     <!-- Header Start -->
-    <div class="container-fluid bg-primary px-0 px-md-5 mb-5" style="background-image: url('front/img/back.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%;">
+      <!--<div class="container-fluid bg-primary px-0 px-md-5 mb-5" style="background-image: url('front/img/back.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%;">
    
      <div class="row align-items-center px-3">
             <div class="col-lg-6 text-center text-lg-left">
-                <h4 class="text-white mb-4 mt-5 mt-lg-0">Kids Learning Center</h4>
+                <h4 class="text-white mb-4 mt-5 mt-lg-0">Travel</h4>
                 <h2 class="text-white mb-4 mt-5 mt-lg-0">
                 "Discovering Bangladesh: Tales from the Land of Rivers and Rich Culture"
                 </h2>
@@ -45,7 +45,28 @@
 src="{{ url('/front/img/aml3.jpg') }}" alt="" />
         </div>
         </div>
+    </div>  -->
+
+    <div class="container-fluid px-0 mb-5" style="background-color: #fff;">
+    <div class="row align-items-center">
+        <div class="col-lg-12 text-center">
+            <!-- Video Container -->
+            <div class="video-container">
+                <video autoplay muted loop class="background-video">
+                    <source src="{{ url('/front/img/video3.mp4') }}" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="video-overlay">
+                    <h2 class="text-white mb-4 mt-5 mt-lg-0" >
+                        "Discovering Bangladesh: Tales from the Land of Rivers and Rich Culture"
+                    </h2>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+    
     <!-- Header End -->
     <!-- Facilities Start -->
     <div class="container-fluid pt-5">
@@ -109,7 +130,8 @@ src="{{ url('/front/img/aml3.jpg') }}" alt="" />
                             </ul>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
+                   
+                    <a href="{{ url('about')}}" class="btn btn-secondary mt-1 py-2 px-4">Learn More</a>
                 </div>
             </div>
         </div>
@@ -637,6 +659,7 @@ src="{{ url('/front/img/aml3.jpg') }}" alt="" />
 @endsection
 
     @section('script')
+    
 <script>
  $(document).ready(function(){
   $('.blog-carousel').owlCarousel({
@@ -645,15 +668,25 @@ src="{{ url('/front/img/aml3.jpg') }}" alt="" />
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
-    dots: true,  // Ensure dots are enabled
+    dots: true,
     responsive: {
       0: { items: 1 },
       768: { items: 2 },
       992: { items: 3 }
+    },
+    onInitialized: function(event) {
+      if (event.item.count <= event.page.size) {
+        $(event.target).find('.owl-nav').hide();
+        $(event.target).find('.owl-dots').hide();
+      }
     }
   });
 });
+
+
+
 </script>
+
 @endsection
     
    

@@ -26,8 +26,8 @@ use App\Http\Controllers\PageController;
 //Home page- HomeController
 //Route::get('/', [HomeController::class, 'home']); 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('about', [HomeController::class, 'about']);
-Route::get('teams', [HomeController::class, 'teams']);
+Route::get('about', [HomeController::class, 'indexAbout'])->name('about');
+Route::get('teams', [HomeController::class, 'indexTeams'])->name('teams');
 Route::get('gallery', [HomeController::class, 'gallery']);
 Route::get('blog', [HomeController::class, 'blog']);
 Route::get('contact', [HomeController::class, 'contact']);

@@ -23,7 +23,7 @@ Traveling is an enriching experience that broadens one's perspective by exposing
                 </a>
                 <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
                    style="width: 38px; height: 38px"
-                   href="#">
+                   href="https://www.facebook.com/amlan.sarkar.1238?mibextid=ZbWKwL">
                     <i class="fab fa-facebook-f"></i>
                 </a>
                 <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
@@ -33,27 +33,42 @@ Traveling is an enriching experience that broadens one's perspective by exposing
                 </a>
                 <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
                    style="width: 38px; height: 38px"
-                   href="#">
+                   href="https://www.instagram.com/amlan.sarkar.1238?igsh=Z3o1YWNwZG9kODJq">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5">
+        <div class="row">
+    <div class="col-lg-3 col-md-6 mb-5" style="margin-left: 16rem;">
             <h3 class="text-primary mb-4">Get In Touch</h3>
-            <div class="d-flex">
-                <h4 class="fa fa-map-marker-alt text-primary"></h4>
-                <div class="pl-3">
-                    <h5 class="text-white">Address</h5>
-                    <p>Bandarban, Thanchi, Bangladesh</p>
-                </div>
-            </div>
-            <div class="d-flex">
+        <div class="d-flex">
+                   <!-- Map Icon as a clickable link -->
+             <a href="https://www.google.com/maps/search/?api=1&query=Bandarban%2C+Thanchi%2C+Bangladesh" target="_blank" class="fa fa-map-marker-alt text-primary"></a>
+             <div class="pl-3">
+                 <h5 class="text-white">Address</h5>
+                 <p>Bandarban, Thanchi, Bangladesh</p>
+             </div>
+        </div>
+   <!--  
+    <div class="d-flex">
                 <h4 class="fa fa-envelope text-primary"></h4>
                 <div class="pl-3">
                     <h5 class="text-white">Email</h5>
                     <p>amlansarkar738@gmail.com</p>
                 </div>
             </div>
+         -->
+         <div class="d-flex">
+    <a href="mailto:amlansarkar738@gmail.com" class="fa fa-envelope">
+        
+    </a>
+    <div class="pl-3">
+        <h5 class="text-white">Email</h5>
+        <p>amlansarkar38@gmail.com</p>
+    </div>
+</div>
+
+           
             <div class="d-flex">
                 <h4 class="fa fa-phone-alt text-primary"></h4>
                 <div class="pl-3">
@@ -62,7 +77,7 @@ Traveling is an enriching experience that broadens one's perspective by exposing
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5">
+        <div class="col-lg-3 col-md-6 mb-5"style="margin-left: auto;" >
           <h3 class="text-primary mb-4">Quick Links</h3>
           <div class="d-flex flex-column justify-content-start">
             <a class="text-white mb-2" href="{{ url('') }}"
@@ -87,7 +102,7 @@ Traveling is an enriching experience that broadens one's perspective by exposing
          style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;">
         <p class="m-0 text-center text-white">
             &copy;
-            <a class="text-primary font-weight-bold" href="#">Your Site Name</a>.
+            <a class="text-primary font-weight-bold" href="#">Tourism</a>.
             All Rights Reserved.
 
             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->

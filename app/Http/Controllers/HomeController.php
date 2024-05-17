@@ -141,6 +141,20 @@ public function index() {
     return view('home', compact('data'));
 }
 
+public function indexAbout() {
+    $data['getRecord'] = BlogModel::getRecordFrontTrack();
+    $data['getCategoryHome'] = CategoryModel::getCategoryHome();
+    $data['getRecordAdminHome'] = User::getRecordAdminHome();
+    return view('about', compact('data'));
+}
+
+public function indexTeams() {
+    $data['getRecord'] = BlogModel::getRecordFrontTrack();
+    $data['getCategoryHome'] = CategoryModel::getCategoryHome();
+    $data['getRecordAdminHome'] = User::getRecordAdminHome();
+    return view('teams', compact('data'));
+}
+
 
 
 

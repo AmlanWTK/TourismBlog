@@ -20,7 +20,9 @@ class BlogController extends Controller
 
     public function add_blog(){
        $data['getCategory'] = CategoryModel::getCategory(); // category database theke category nibe... ar database access korte model lagche.
-        return view ('backend.blog.add',$data);
+       
+       return view ('backend.blog.add',$data);
+        
     }
 
     public function insert_blog(Request $request)

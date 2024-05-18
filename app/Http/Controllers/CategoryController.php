@@ -32,6 +32,7 @@ class CategoryController extends Controller
         $save->name = trim($request->name);
         $save->slug = trim(Str::slug($request->name));
         $save->title = trim($request->title);
+        $save->map_location=trim($request->map_location);
         $save->meta_title = trim($request->meta_title);
         $save->meta_description = trim($request->meta_description);
         $save->meta_keywords = trim($request->meta_keywords);

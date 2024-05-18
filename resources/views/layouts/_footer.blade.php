@@ -1,47 +1,51 @@
-<!-- Footer Start -->
-<div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
-    <div class="row pt-5">
-        <div class="col-lg-3 col-md-6 mb-5">
-            <a href=""
-               class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
-               style="font-size: 40px; line-height: 40px">
-                <i class="flaticon-043-teddy-bear"></i>
-                <span class="text-white">Tourism</span>
-            </a>
-            <p>
- 
+  <!-- Footer Start -->
+  <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+      <div class="row pt-5">
+        <div class="col-lg-4 col-md-4 mb-4">
+          <a
+            href=""
+            class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+            style="font-size: 40px; line-height: 40px"
+          >
+          <img src="{{ url('assets/img/travel.png') }}" alt="" width="80" height="60">
+            <span class="text-white">Tourism</span>
+          </a>
+          <p>
+           
 Traveling is an enriching experience that broadens one's perspective by exposing them to new cultures,
  cuisines, and landscapes. It offers a chance to escape the routine of daily life, creating memories that last a lifetime.
   Whether it's exploring ancient ruins, hiking through pristine forests, or simply relaxing on a distant beach,
  traveling provides a sense of adventure and discovery that is unparalleled
-            </p>
-            <div class="d-flex justify-content-start mt-4">
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-                   style="width: 38px; height: 38px"
-                   href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-                   style="width: 38px; height: 38px"
-                   href="https://www.facebook.com/amlan.sarkar.1238?mibextid=ZbWKwL">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-                   style="width: 38px; height: 38px"
-                   href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+        </p>
+          <div class="d-flex justify-content-start mt-4">
+            <a
+              class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+              style="width: 38px; height: 38px"
+              href="https://github.com/AmlanWTK"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+              style="width: 38px; height: 38px"
+              href="https://www.facebook.com/amlan.sarkar.1238?mibextid=ZbWKwL">
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+              style="width: 38px; height: 38px"
+              href="http://www.linkedin.com/in/hafsa-tazrian-8579"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
                    style="width: 38px; height: 38px"
                    href="https://www.instagram.com/amlan.sarkar.1238?igsh=Z3o1YWNwZG9kODJq">
                     <i class="fab fa-instagram"></i>
                 </a>
-            </div>
+          </div>
         </div>
-        <div class="row">
-    <div class="col-lg-3 col-md-6 mb-5" style="margin-left: 16rem;">
-            <h3 class="text-primary mb-4">Get In Touch</h3>
-        <div class="d-flex">
+        <div class="col-lg-4 col-md-4 mb-4" style="margin-left: 6rem;" >
+    <h3 class="text-primary mb-4">Get In Touch</h3>
+    <div class="d-flex">
                    <!-- Map Icon as a clickable link -->
              <a href="https://www.google.com/maps/search/?api=1&query=Bandarban%2C+Thanchi%2C+Bangladesh" target="_blank" class="fa fa-map-marker-alt text-primary"></a>
              <div class="pl-3">
@@ -49,35 +53,31 @@ Traveling is an enriching experience that broadens one's perspective by exposing
                  <p>Bandarban, Thanchi, Bangladesh</p>
              </div>
         </div>
-   <!--  
     <div class="d-flex">
-                <h4 class="fa fa-envelope text-primary"></h4>
-                <div class="pl-3">
-                    <h5 class="text-white">Email</h5>
-                    <p>amlansarkar738@gmail.com</p>
-                </div>
-            </div>
-         -->
-         <div class="d-flex">
-    <a href="mailto:amlansarkar738@gmail.com" class="fa fa-envelope">
-        
-    </a>
+        <h4 class="fa fa-envelope text-primary"></h4>
+        <div class="pl-3">
+            <h5 class="text-white">Email</h5>
+            <p>amlansarkar738@gmail.com</p>
+        </div>
+    </div>
+    <div class="d-flex">
+        <h4 class="fa fa-phone-alt text-primary"></h4>
+        <div class="pl-3">
+            <h5 class="text-white">Phone</h5>
+            <p>+880 1611173166</p>
+        </div>
+    </div>
+    <div class="d-flex">
+    <a href="https://wa.me/8801767147307" target="_blank" class="fab fa-whatsapp fa-2x text-primary" style="text-decoration: none;"></a>
     <div class="pl-3">
-        <h5 class="text-white">Email</h5>
-        <p>amlansarkar38@gmail.com</p>
+        <h5 class="text-white">Whatsapp</h5>
+        <p>+880 1767147307</p>
     </div>
 </div>
 
-           
-            <div class="d-flex">
-                <h4 class="fa fa-phone-alt text-primary"></h4>
-                <div class="pl-3">
-                    <h5 class="text-white">Phone</h5>
-                    <p>+880 1611173166</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5"style="margin-left: auto;" >
+</div>
+
+        <div class="col-lg-4 col-md-4 mb-4" style="margin-left: -6rem;">
           <h3 class="text-primary mb-4">Quick Links</h3>
           <div class="d-flex flex-column justify-content-start">
             <a class="text-white mb-2" href="{{ url('') }}"
@@ -96,18 +96,19 @@ Traveling is an enriching experience that broadens one's perspective by exposing
               ><i class="fa fa-angle-right mr-2"></i>Contact Us</a
             >
           </div>
+        </div>
         
-    </div>
-    <div class="container-fluid pt-5"
-         style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;">
+      </div>
+      <div
+        class="container-fluid pt-5"
+        style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;"
+      >
         <p class="m-0 text-center text-white">
-            &copy;
-            <a class="text-primary font-weight-bold" href="#">Tourism</a>.
-            All Rights Reserved.
-
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-           
+          &copy;
+          
+          <a class="text-primary font-weight-bold" href="#">Tourism</a>.
+          All Rights Reserved.
         </p>
+      </div>
     </div>
-</div>
-<!-- Footer End -->
+    <!-- Footer End -->

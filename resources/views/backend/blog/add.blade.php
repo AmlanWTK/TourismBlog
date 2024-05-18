@@ -32,6 +32,12 @@
                   </select>
                   <div style="color:red;">{{ $errors->first('category_id') }}</div>
                 </div>
+                 
+                <div class="col-md-12">
+                  <label class="form-label"  style="color:#002244;">Map-Location *</label>
+                  <input type="text" class="form-control" name="map_location"  required>
+                  <div style="color:red;">{{ $errors->first('title') }}</div>
+                </div>
 
                 <div class="col-md-12">
                   <label class="form-label"  style="color:#002244;">Image *</label>

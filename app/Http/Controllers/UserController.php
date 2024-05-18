@@ -122,4 +122,10 @@ class UserController extends Controller
 
         return redirect('panel/dashboard')->with('success', "Account successfully updated.");
     }
+
+    public function Help()
+    {
+        return view('backend.profile.help');
+    }
+
 }

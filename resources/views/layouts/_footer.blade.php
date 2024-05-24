@@ -1,5 +1,5 @@
-  <!-- Footer Start -->
-  <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+  <!-- Footer Start --><div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5" style="background-image: url('front/img/back.jpg'); background-size: cover; background-position: center;">
+
       <div class="row pt-5">
         <div class="col-lg-4 col-md-4 mb-4">
           <a

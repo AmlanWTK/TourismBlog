@@ -85,6 +85,11 @@ class User extends Authenticatable
             return url('front/img/amlan3.jpg');
         }
     }
+
+    public function blogs()
+    {
+        return $this->hasMany(BlogModel::class);
+    }
    
 
 }

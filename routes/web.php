@@ -56,6 +56,9 @@ Route::post('/logout', [AuthController::class, 'loggedout'])->name('logout');
 Route::group(['middleware' => 'admin'], function(){
 
 
+     //admin dashboard panel - DashboardController
+     Route::get('panel/dashboard', [DashboardController::class, 'dashboard']);
+
     //User panel:
     //admin panel - user: UserController
     Route::get('panel/user/list', [UserController::class, 'user']);
@@ -125,6 +128,10 @@ Route::group(['middleware' => 'adminuser'], function(){ //middleword : fixed wor
    Route::post('contact_mail', [HomeController::class, 'contact_mail_send']);
    
     
+});
+
+Route::group(['middleware' => 'user'], function() {
+    Route::get('/panel/dashboard_user', [DashboardController::class, 'dashboard_user']);
 });
 
 

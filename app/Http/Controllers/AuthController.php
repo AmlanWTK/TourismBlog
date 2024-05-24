@@ -96,10 +96,15 @@ class AuthController extends Controller
        $remember = !empty($request->remember) ? true: false;
        if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $remember))
        {
-        if (!empty(Auth::user()->email_verified_at))
-        {
-            return redirect('panel/dashboard');
-        }else
+        if (!empty(Auth::user()->email_verified_at)){
+            // Redirect based on whether the user is an admin or not
+            if (Auth::user()->is_admin) {
+                return redirect('panel/dashboard');
+            } else {
+                return redirect('panel/dashboard_user');
+        }
+        }
+        else
         {   
             $user_id = Auth::user()->id;
             Auth::logout(); //after logout , token automatically changes so have to send the $user_id

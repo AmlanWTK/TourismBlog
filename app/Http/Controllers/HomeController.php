@@ -131,9 +131,11 @@ public function index() {
     $data['getBeach'] = BlogModel::getRecordFrontBeach();
     $data['getPopular'] = BlogModel::getRecordFrontPopular();
     $data['getWaterfall'] = BlogModel::getRecordFrontWaterfall();
+  
     $data['getStories'] = BlogModel::getRecordStories();
     $data['getCategoryHome'] = CategoryModel::getCategoryHome();
     $data['getRecordAdminHome'] = User::getRecordAdminHome();
+    
    // $data['getRecordUserHome'] = User::getRecordUserHome();
 
     

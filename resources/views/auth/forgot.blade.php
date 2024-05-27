@@ -36,7 +36,8 @@
 
 <body>
 
-  <main style="background-color: #adbc95;">
+  <main  style="background: url('{{ asset('front/img/lightcolour7.jpg') }}');background-size: cover;">
+        
     <div class="container">
 
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
@@ -47,11 +48,11 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="{{ url('') }}" class="logo d-flex align-items-center w-auto">
                   <img src="{{  url('/assets/img/splashLogo.png') }}" alt="">
-                  <span class="d-none d-lg-block" style="color: #12372A;">Colors</span>
+                  <span class="d-none d-lg-block" style="color: #12372A;">Tourism</span>
                 </a>
               </div><!-- End Logo -->
 
-              <div class="card mb-3" style="background-color: #fbfada;">
+              <div class="card mb-3" style="background: url('{{ asset('front/img/lightcolour3.webp') }}');background-size: cover;">
 
                 <div class="card-body" >
 
@@ -74,7 +75,7 @@
 
                    
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit" style="background-color: #12372a;" >Reset Password</button>
+                      <button class="btn btn-primary w-100" type="submit" style="background-color: #002244" >Reset Password</button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0" style="color: #436850;">Don't have account? <a href="{{ url('register') }}" style="color: #12372a;">Create an account</a></p>

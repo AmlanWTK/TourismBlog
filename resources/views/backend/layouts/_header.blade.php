@@ -162,7 +162,8 @@
         <span class="d-none d-md-block dropdown-toggle ps-2" style="color: #002244">{{ Auth::user()->name }}</span>
       </a><!-- End Profile Iamge Icon -->
 
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile" style="background: url('{{ asset('front/img/lightcolour7.jpg') }}');background-size: cover;">
+        
         <li class="dropdown-header">
           <h6>{{ Auth::user()->name }}</h6>
         </li>

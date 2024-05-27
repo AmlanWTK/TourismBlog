@@ -3,11 +3,15 @@
 @section('content')
 
 <section class="section faq">
-    <div class="container" >
-        <div class="row" >
-            <div class="col-lg-12" >
+    <div class="container" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        
+        <div class="row" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        
+            <div class="col-lg-12" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        
                 <div class="card basic" >
-                    <div class="card-body">
+                    <div class="card-body"style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        >
                         <h5 class="card-title" style="color: #002244;margin-bottom: 3rem;">Frequently Asked Questions</h5>
 
                         <div >

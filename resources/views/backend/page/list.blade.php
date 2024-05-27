@@ -7,7 +7,8 @@
 
         <div class="col-lg-12">
         @include('layouts._message')
-          <div class="card" style="background-color:#B0C4DE;">
+          <div class="card" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        
          
             <div class="card-body" >
               <h5 class="card-title" style="color: #002244;">Pages

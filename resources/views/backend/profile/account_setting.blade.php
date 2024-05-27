@@ -8,7 +8,8 @@
             @include('layouts._message')
 
           <div class="card">
-            <div class="card-body" style="background-color:#F0F8FF;">
+            <div class="card-body" style="background: url('{{ asset('front/img/lightcolour.jpg') }}');background-size: cover;">
+        
               <h5 class="card-title" style="color:#12372a;">Account Settings</h5>
 
               <!-- Multi Columns Form -->

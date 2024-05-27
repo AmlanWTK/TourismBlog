@@ -36,7 +36,8 @@
 
 <body>
 
-  <main style="background-color: #B0C4DE;">
+  <main style="background: url('{{ asset('front/img/lightcolour7.jpg') }}');background-size: cover;">
+      <h5 class="card-title">Reports <span>All Time</span></h5>
     <div class="container">
 
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
@@ -51,8 +52,8 @@
                 </a>
               </div><!-- End Logo -->
 
-              <div class="card mb-3" style="background-color: #F0F8FF;">
-
+              <div class="card mb-3" style="background: url('{{ asset('front/img/lightcolour3.webp') }}');background-size: cover;">
+      
                 <div class="card-body" >
 
                   <div class="pt-4 pb-2">

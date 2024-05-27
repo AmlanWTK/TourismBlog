@@ -1,5 +1,6 @@
 <!-- ======= Sidebar ======= -->
-<aside id="sidebar" class="sidebar" style="background-color: #B0C4DE;">
+<aside id="sidebar" class="sidebar" style="background: url('{{ asset('front/img/straight.avif') }}');background-size: cover;">
+      <h5 class="card-title">Reports <span>All Time</span></h5>
 
 <ul class="sidebar-nav" id="sidebar-nav" style="background-color: #B0C4DE;" >
 

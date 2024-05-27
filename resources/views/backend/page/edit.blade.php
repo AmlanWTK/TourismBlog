@@ -10,7 +10,8 @@
         <div class="col-lg-12">
 
           <div class="card">
-            <div class="card-body" style="background-color:#fbfada;">
+            <div class="card-body" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        
               <h5 class="card-title" style="color:#12372a;">Edit Page</h5>
 
               <!-- Multi Columns Form -->
@@ -53,7 +54,7 @@
 
                 
                 <div class="text-center" style="margin-top: 30px;">
-                  <button type="submit" class="btn btn-primary" style="background-color: #436850">Submit</button>
+                  <button type="submit" class="btn btn-primary" style="background-color: #002244;">Submit</button>
                 </div>
               </form><!-- End Multi Columns Form -->
 

@@ -10,7 +10,8 @@
         <div class="col-lg-12">
 
           <div class="card">
-            <div class="card-body" style="background-color:#B0C4DE;">
+            <div class="card-body" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        
               <h5 class="card-title" style="color:#12372a;">Edit Blog</h5>
 
               <!-- Multi Columns Form -->

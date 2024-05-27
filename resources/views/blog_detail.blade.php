@@ -136,7 +136,7 @@
           </div>
 
           <!-- Comment Form -->
-          <div class="bg-light p-5">
+          <div class="bg-light p-5"style="background-image: url('front/img/lightcolour1.jpg'); background-size: cover; background-position: center;">
             <h2 class="mb-4">Leave a comment</h2>
             <form method="post" action="{{ url('blog-comment-submit') }}">
             {{csrf_field()}}
@@ -154,7 +154,7 @@
 
         <div class="col-lg-4 mt-5 mt-lg-0">
           <!-- Author Bio -->
-          <div class="d-flex flex-column text-center bg-primary rounded mb-5 py-5 px-4"  >
+          <div class="d-flex flex-column text-center bg-primary rounded mb-5 py-5 px-4" >
             <img
               src="{{ Auth::user()->getProfile() }}"
               src="{{  $getRecord->user->getProfile() }}"

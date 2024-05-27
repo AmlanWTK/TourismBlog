@@ -7,15 +7,16 @@
 
         <div class="col-lg-12">
         @include('layouts._message')
-          <div class="card" style="background-color:#B0C4DE;">
+          <div class="card" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        
          
-            <div class="card-body" >
+            <div class="card-body" style="background: url('{{ asset('front/img/lightcolour.jpg') }}');background-size: cover;"> >
               <h5 class="card-title" style="color: #12372a;">Blogs (Total : {{$getRecord->total()}})
                 <a href="{{url('panel/blog/add')}}" class="btn btn-primary" style="float: right; margin-top: -12px;background-color: #002244">Add Blog</a>
               </h5>
 
               <form class="row" accept="get">
-                <div class="col-md-1" style="margin-bottom: 10px">
+                <div class="col-md-1" style="margin-bottom: 10px" >
                   <label class="form-label">ID</label>
                   <input type="text" name="id" value="{{ Request::get('id') }}" class="form-control" >
                 </div>
@@ -78,17 +79,17 @@
               <table class="table table-striped" >
                 <thead >
                   <tr >
-                    <th scope="col" style="background-color: #F0F8FF;">#</th>
-                    <th scope="col" style="background-color: #F0F8FF;">Image</th>
+                    <th scope="col" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">#</th>
+                    <th scope="col" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">Image</th>
                     @if(Auth::user()->is_admin == 1)
                     <th scope="col" style="background-color: #F0F8FF;">Username</th>
                     @endif
-                    <th scope="col" style="background-color: #F0F8FF;">Title</th>
-                    <th scope="col" style="background-color: #F0F8FF;">Category</th>
-                    <th scope="col" style="background-color: #F0F8FF;">Status</th>
-                    <th scope="col" style="background-color: #F0F8FF;">Publish</th>
-                    <th scope="col" style="background-color: #F0F8FF;">Created Date</th>
-                    <th scope="col" style="background-color: #F0F8FF;">Action</th>
+                    <th scope="col" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">Title</th>
+                    <th scope="col" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">Category</th>
+                    <th scope="col" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">Status</th>
+                    <th scope="col" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">Publish</th>
+                    <th scope="col" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">Created Date</th>
+                    <th scope="col" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">Action</th>
                   </tr>
                 </thead>
                 <tbody>

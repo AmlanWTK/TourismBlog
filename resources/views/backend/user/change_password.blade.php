@@ -8,7 +8,8 @@
             @include('layouts._message')
 
           <div class="card">
-            <div class="card-body" style="background-color:#fbfada;">
+            <div class="card-body" style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        
               <h5 class="card-title" style="color:#12372a;">Change Password</h5>
 
               <!-- Multi Columns Form -->
@@ -32,7 +33,7 @@
 
                 
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary" style="background-color: #436850">Update Password</button>
+                  <button type="submit" class="btn btn-primary" style="background-color: #002244;">Update Password</button>
                 </div>
               </form><!-- End Multi Columns Form -->
 

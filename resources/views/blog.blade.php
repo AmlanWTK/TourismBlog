@@ -3,7 +3,8 @@
 @section('content')
 
 <!-- Header Start -->
-<div class="container-fluid bg-primary mb-5" style="background-image:url('front/img/back.jpg')">
+<div class="container-fluid bg-primary mb-5"style="background: url('{{ asset('front/img/lightcolour.jpg') }}');background-size: cover;">
+        
       <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
         <h3 class="display-3 font-weight-bold text-white">
         @if(!empty($header_title))  
@@ -17,7 +18,8 @@
     <!-- Header End -->
 
     <!-- Blog Start -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5"style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
+        
       <div class="container">
 
         <div class="row pb-3">

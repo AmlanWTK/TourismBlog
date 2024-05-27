@@ -69,7 +69,7 @@ src="{{ url('/front/img/aml3.jpg') }}" alt="" />
     
     <!-- Header End -->
     <!-- Facilities Start -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5"style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
      <div class="text-center pb-2">
       <h1 class="mb-4">Exploring Bangladesh: Unveiling the Six Divisions</h1>
     </div>
@@ -139,7 +139,7 @@ src="{{ url('/front/img/aml3.jpg') }}" alt="" />
     <!-- About End -->
     <!-- Popular Destination -->
     
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5"style="background: url('{{ asset('front/img/lightcolour.jpg') }}');background-size: cover;">
       <div class="container">
         <div class="text-center pb-2">
           <p class="section-title px-5">
@@ -262,7 +262,7 @@ src="{{ url('/front/img/aml3.jpg') }}" alt="" />
     </div>
     <!-- Registration End -->
     <!-- Waterfalls -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5"style="background: url('{{ asset('front/img/lightcolour1.jpg') }}');background-size: cover;">
       <div class="container">
         <div class="text-center pb-2">
           <p class="section-title px-5">
@@ -315,7 +315,7 @@ src="{{ url('/front/img/aml3.jpg') }}" alt="" />
 
 
     <!-- Stories -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5"style="background: url('{{ asset('front/img/lightcolour.jpg') }}');background-size: cover;">
       <div class="container">
         <div class="text-center pb-2">
           <p class="section-title px-5">

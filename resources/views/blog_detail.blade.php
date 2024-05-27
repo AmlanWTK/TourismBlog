@@ -81,10 +81,10 @@
 
             <div class="media mb-4">
               <img
-                src="{{ url('front/img/user.jpg') }}"
+                src="{{ $comment->user->getProfile() }}"
                 alt="Image"
                 class="img-fluid rounded-circle mr-3 mt-1"
-                style="width: 45px"
+                style="width: 45px; height: 45px"
               />
               <div class="media-body">
                 <h6>
@@ -98,10 +98,10 @@
                 @foreach($comment->getReply as $reply)
                 <div class="media mt-4">
                   <img
-                    src="{{ url('front/img/user.jpg') }}"
+                    src="{{ $reply->user->getProfile() }}"
                     alt="Image"
                     class="img-fluid rounded-circle mr-3 mt-1"
-                    style="width: 45px"
+                    style="width: 45px; height:45px"
                   />
                   <div class="media-body">
                   <h6>

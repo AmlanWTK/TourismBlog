@@ -27,6 +27,12 @@ class BlogController extends Controller
 
     public function insert_blog(Request $request)
     {
+
+        $userId = session('user_id');
+        
+        if (empty($userId)) {
+            return redirect('login')->with('error', 'You need to be logged in to create a blog.');
+        }
           
           $save = new BlogModel();
           $save->user_id = Auth::user()->id;

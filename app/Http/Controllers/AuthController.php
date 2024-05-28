@@ -9,7 +9,6 @@ use App\Mail\ForgotPasswordMail;
 use Hash;
 use Mail;
 use Str;
-use Auth;
 
 class AuthController extends Controller
 {
@@ -21,6 +20,7 @@ class AuthController extends Controller
         $data['meta_keywords'] = !empty($getPage) ? $getPage->meta_keywords : '';
         return view ('auth.login', $data);
     }
+    
     public function register()
     {
         $getPage = PageModel::getSlug('register');
@@ -29,6 +29,7 @@ class AuthController extends Controller
         $data['meta_keywords'] = !empty($getPage) ? $getPage->meta_keywords : '';
         return view ('auth.register', $data);
     }
+    
     public function forgot()
     {
         $getPage = PageModel::getSlug('forgot');
@@ -37,151 +38,135 @@ class AuthController extends Controller
         $data['meta_keywords'] = !empty($getPage) ? $getPage->meta_keywords : '';
         return view ('auth.forgot', $data);
     }
+    
     public function reset($token)
     {
-        $user= User::where('remember_token', '=', $token)->first();
-        if(!empty($user)){
+        $user = User::where('remember_token', '=', $token)->first();
+        if (!empty($user)) {
             $getPage = PageModel::getSlug('reset');
             $data['meta_title'] = !empty($getPage) ? $getPage->meta_title : 'ResetPassword';
             $data['meta_description'] = !empty($getPage) ? $getPage->meta_description : '';
             $data['meta_keywords'] = !empty($getPage) ? $getPage->meta_keywords : '';
             $data['user'] = $user;
-            return view ('auth.reset', $data);
-        }
-        else{
+            return view('auth.reset', $data);
+        } else {
             abort(404);
         }
     }
 
-    public function post_reset($token, Request $request){
-        $user= User::where('remember_token', '=', $token)->first();
-        if(!empty($user)){
-            if($request->password == $request->cpassword){
+    public function post_reset($token, Request $request)
+    {
+        $user = User::where('remember_token', '=', $token)->first();
+        if (!empty($user)) {
+            if ($request->password == $request->cpassword) {
                 $user->password = Hash::make($request->password);
-                if(empty($user->email_verified_at)){
-                    $user->email_verified_at =date('Y-m-d H:i:s');
+                if (empty($user->email_verified_at)) {
+                    $user->email_verified_at = date('Y-m-d H:i:s');
                 }
-               
                 $user->remember_token = Str::random(40);
                 $user->save();
 
                 return redirect('login')->with('success', "Password successfully reset!");
-            }
-            else{
+            } else {
                 return redirect()->back()->with('error', "Passwords don't match!");
             }
-        }
-        else{
+        } else {
             abort(404);
         }
     }
+    
     public function forgot_password(Request $request)
     {
-        $user= User::where('email', '=', $request->email)->first();
-        if(!empty($user)){
+        $user = User::where('email', '=', $request->email)->first();
+        if (!empty($user)) {
             $user->remember_token = Str::random(40);
             $user->save();
 
             Mail::to($user->email)->send(new ForgotPasswordMail($user));
             return redirect()->back()->with('success', "Please check your mailbox to reset password.");
-        }
-        else{
+        } else {
             return redirect()->back()->with('error', "No user created with this email.");
         }
     }
 
     public function auth_login(Request $request)
     {
-       //dd($request->all());
-       $remember = !empty($request->remember) ? true: false;
-       if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $remember))
-       {
-        if (!empty(Auth::user()->email_verified_at)){
-            // Redirect based on whether the user is an admin or not
-            if (Auth::user()->is_admin) {
-                return redirect('panel/dashboard');
+        $user = User::where('email', $request->email)->first();
+        if ($user && Hash::check($request->password, $user->password)) {
+            if (!empty($user->email_verified_at)) {
+                session(['user_id' => $user->id]);
+                if ($user->is_admin) {
+                    return redirect('panel/dashboard');
+                } else {
+                    return redirect('panel/dashboard_user');
+                }
             } else {
-                return redirect('panel/dashboard_user');
+                $user->remember_token = Str::random(40);
+                $user->save();
+                Mail::to($user->email)->send(new RegisterMail($user));
+                return redirect()->back()->with('success', "Please verify your email first.");
+            }
+        } else {
+            return redirect()->back()->with('error', "Sorry, we don't recognize that username or password. You can try again or reset your password.");
         }
-        }
-        else
-        {   
-            $user_id = Auth::user()->id;
-            Auth::logout(); //after logout , token automatically changes so have to send the $user_id
-
-            $save= User::getSingle($user_id);
-            $save->remember_token = Str::random(40);
-            $save->save();
-
-
-            Mail::to($save->email)->send(new RegisterMail($save));
-            return redirect()->back()->with('success', "Please verify your email first.");
-
-        }
-
-       }
-       else
-       {
-        return redirect()->back()->with('error', "Sorry, we don't recognize that username or password. You can try again or reset your password.");
-           
-       }
-      
-       
     }
-
 
     public function create_user(Request $request)
     {
-        request()->validate([
-            'name' =>'required',
-            'email' =>'required|email|unique:users',
-            'password' =>'required'
-           ]);
-         
-       $save= new User;
-       $save->name = trim($request->name); //trim space reduce kora
-       $save->email = trim($request->email);
-       $save->password = Hash::make($request->password);
-       $save->remember_token = Str::random(40);
-      
-       $save->save();
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required'
+        ]);
+        
+        $user = new User;
+        $user->name = trim($request->name);
+        $user->email = trim($request->email);
+        $user->password = Hash::make($request->password);
+        $user->remember_token = Str::random(40);
+        $user->save();
 
-       Mail::to($save->email)->send(new RegisterMail($save));
+        Mail::to($user->email)->send(new RegisterMail($user));
 
-
-       
-       return redirect('login')->with('success', "Registered Succesfully! Verify your email.");
+        return redirect('login')->with('success', "Registered Successfully! Verify your email.");
     }
-
-
-
-
 
     public function verify($token)
     {
         $user = User::where('remember_token', '=', $token)->first();
-        if(!empty($user)){
+        if (!empty($user)) {
             $user->email_verified_at = date('Y-m-d H:i:s');
             $user->remember_token = Str::random(40);
             $user->save();
 
-            return redirect('login')->with('success', "Account succesfully verified.");
-        }
-        else{
+            return redirect('login')->with('success', "Account successfully verified.");
+        } else {
             abort(404);
         }
-
     }
-    public function logout(){
-        Auth::logout();
+
+    public function logout()
+    {
+        session()->forget('user_id');
         return redirect('login');
     }
-    
-    public function loggedout(Request $request){
-        Auth::logout();
+
+    public function loggedout(Request $request)
+    {
+        session()->forget('user_id');
         return redirect('/');
     }
 
-  
-
+    private function isAuthenticated()
+    {
+        return session()->has('user_id');
+    }
+    
+    private function getAuthenticatedUser()
+    {
+        if ($this->isAuthenticated()) {
+            return User::find(session('user_id'));
+        }
+        return null;
+    }
 }

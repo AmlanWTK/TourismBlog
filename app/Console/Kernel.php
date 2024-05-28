@@ -24,4 +24,9 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
+    protected $routeMiddleware = [
+        
+        'auth.custom' => \App\Http\Middleware\CheckAuth::class,
+    ];
+    
 }

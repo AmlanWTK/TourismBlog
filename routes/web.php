@@ -31,8 +31,6 @@ Route::get('teams', [HomeController::class, 'indexTeams'])->name('teams');
 Route::get('gallery', [HomeController::class, 'gallery']);
 Route::get('blog', [HomeController::class, 'blog']);
 Route::get('contact', [HomeController::class, 'contact']);
-
-//Authentication- AuthController
 Route::get('login', [AuthController::class, 'login']);
 Route::post('login', [AuthController::class, 'auth_login']);
 
@@ -47,7 +45,12 @@ Route::get('reset/{token}', [AuthController::class, 'reset']);
 Route::post('reset/{token}', [AuthController::class, 'post_reset']);
 
 Route::get('logout', [AuthController::class, 'logout']);
-Route::post('/logout', [AuthController::class, 'loggedout'])->name('logout');
+Route::post('logout', [AuthController::class, 'loggedout'])->name('logout');
+
+// Protected Routes
+Route::group(['middleware' => 'auth.custom'], function () {
+    Route::get('panel/dashboard', [DashboardController::class, 'index']);});
+    // Add other protected routes here
 
 
 

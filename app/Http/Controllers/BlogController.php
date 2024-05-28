@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\CategoryModel;
 use App\Models\BlogModel;
 use App\Models\BlogTagsModel;
-use Auth;
+
 use Str; //slug banate lage
 use File;
 

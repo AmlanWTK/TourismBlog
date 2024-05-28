@@ -1,5 +1,5 @@
 @if(!empty(session('success')))
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success" role="alert"style="background-image: url('front/img/lightcolour1.jpg'); background-size: cover; background-position: center;">
         {{ session('success') }}
     </div>
 @endif
